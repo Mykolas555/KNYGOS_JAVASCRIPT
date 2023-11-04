@@ -1,0 +1,580 @@
+//primityvus tipai
+let firstname = 'Jonas'; // string
+let lastname = 'jonaitis'; // string
+let itemPrice = 12.56;
+let userAge = 25;
+let userOnline = true;
+ 
+console.log(typeof(firstname));
+console.log(typeof(lastname));
+console.log(typeof(itemPrice));
+console.log(typeof(userAge));
+console.log(typeof(userOnline));
+ 
+//inteligentiski duomenu tipai
+ 
+//masyvas
+let productCart = ['computer', 'phone', 'pencil',];
+//objektas
+let product = {
+    title: "apple mac book pro",
+    price: 23366.12,
+    location: 'kaunas'
+}
+//masyve objektas
+let products = [
+    {
+        title: "apple mac book pro",
+    price: 23366.12,
+    location: 'kaunas'
+    },
+    {
+        title: "apple mac book pro",
+    price: 23366.12,
+    location: 'kaunas'
+    },
+    {
+        title: "apple mac book pro",
+    price: 23366.12,
+    location: 'kaunas'
+    },
+    {
+        title: "apple mac book pro",
+    price: 23366.12,
+    location: 'kaunas'
+    }
+]
+ 
+console.log(typeof(firstname));
+console.log(typeof(lastname));
+console.log(typeof(itemPrice));
+console.log(typeof(userAge));
+console.log(typeof(userOnline));
+ 
+ 
+ 
+console.log("man patinka js "+firstname);
+console.log(`vartotojo pavarde yra ${lastname}`)
+ 
+const userRole = "admin";
+ 
+console.log(`vartotojo role yra: ${userRole}`)
+ 
+ 
+var firstName = "Mykolas";
+console.log(firstName[3])
+ 
+console.log(firstName.length);
+ 
+console.log(firstName.indexOf("ol"))
+ 
+let data = []
+ 
+if (data){
+    console.log('ok')
+}else{
+    console.log('false')
+}
+ 
+ 
+const language = "aa";
+ 
+switch (language){
+    case "lt":
+        console.log("sveiki");
+        break;
+    case "en":
+        console.log("hello");
+        break;
+    default:
+        console.log("nesupratau kalbos")
+}
+ 
+let weather = 20;
+let userName = weather >19 ? "andrius":"karolis";
+console.log(userName)
+ 
+ 
+/*ciklai*/
+
+let items = ['phone', 'pencil', 'box', 'table']
+ 
+let user = {
+    id:1,
+    name:"jonas",
+    email:"jonux@kazkas.lt",
+    role:"admin"
+}
+ 
+for (let i=0;i<items.length; i++){
+    console.log(items[i])
+}
+ 
+for(let item in items){
+    console.log(items[item])
+}
+
+ 
+//negali eiti per objekta
+ 
+for(let item of items){
+    console.log(item)
+}
+
+ 
+for(let userDate in user){
+    console.log(`${userData}:${user[userDate]}`)
+}
+
+ 
+
+let students = [
+    {
+        id:1,
+        firstName:"tadas",
+        lastname:"tadauskas",
+        email:"tadas@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:2,
+        firstName:"ieva",
+        lastname:"tadauske",
+        email:"ieva@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:3,
+        firstName:"ona",
+        lastname:"tadauskis",
+        email:"ona@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:4,
+        firstName:"tadas",
+        lastname:"tadauskas",
+        email:"tadas@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:5,
+        firstName:"petras",
+        lastname:"tadauschis",
+        email:"petras@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    }
+]
+ 
+/* isvesti studentus tokiu butu:
+ 
+studentai:
+-----------
+petras
+tadauschis
+petras@tadaushis.lt
+grupe: students
+------------
+(kitas studentas)
+*/
+ 
+
+for (let student in students){
+    console.log('------------');
+    for(let studentData in student){
+        if(studentData==='group'){
+            console.log(`grupe:$students[studentData])`};
+//
+
+for(let student of students){
+    console.log('---------------');
+    for (let studentData in student){
+        if(studentData === 'group'){
+            console.log(`grupe:${student[studentData]}`);
+        }else{
+            if(studentData=='marks'){
+                console.log('ivertinimai:');
+                for(marks of student[studentData]){
+                    console.log(`${marks.subject}:${marks.mark}`)
+               }
+            }
+            console.log(student[studentData]);
+        }
+    }
+}
+ 
+*/
+ 
+//masyvu metodai   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split*/
+ 
+
+ 
+let names = ['jonas', 'andrius', 'ieva', 'karolis']; //masyvas
+console.log(names);
+ 
+names = names.join(', '); //names tampa stringu;
+console.log(names);
+ 
+names = names.split(', '); // grazinam atgal
+console.log(names);
+ 
+names.push('giedrius'); //pridedamas i gala masyvo elementas
+console.log(names);
+ 
+names.pop() //istrina paskutini masyvo elementa
+console.log(names)
+ 
+names.unshift('kristina') //prideda elementa i prieki
+console.log(names)
+ 
+names.shift()// pasalina elementa is priekio
+console.log(names)
+
+ 
+let names = ['jonas', 'andrius', 'ieva', 'karolis'];
+ 
+names.splice(3,0,"Gintaras") // pridedam i masyva i trecia vieta
+console.log(names);
+ 
+let user = prompt('ivesk vartotojo varda');
+console.log(user)
+ 
+ 
+ 
+/* reikia sukurti sveciu saraso aplikacija.
+paleidus programa issoka langas ir paklausia kiek sveciu
+tada ismeta langa, kuriame reik irasyti sveciu vardus
+pabaigus sarasa isvesti sveciu sarasa
+ 
+bonus, sukurti masyva black list, jei yra masyve jo varddas, tada jo neivedam sarase
+*/
+/*
+let sveciu_sarasas = []
+ 
+let sveciu_skaicius = prompt('iveskite sveciu skaiciu');
+console.log(sveciu_skaicius);
+ 
+for (let i in sveciu_skaicius){
+    let svecio_vardas = prompt('iveskite svecio varda');
+    console.log(svecio_vardas)
+ 
+}
+*/
+ 
+function syHI(a){ //funkcijos deklaravimas
+    return a*2;
+}
+ 
+console.log(syHI(5)); //funkcijos kvietimas
+ 
+const calc = function(...numbers){ // split operatorius
+    return numbers;
+}
+ 
+console.log(calc(5,6,6,2,4,2,3))
+ 
+//anonime arrow funkcija
+const calculator = function(...numbers){ // split operatorius
+    return numbers.reduce((prev, current)=>prev*current);
+}
+ 
+console.log(calculator(5,6,7))
+ 
+
+(function(){
+ 
+//galima rasyt cia ir viskas bus funkcijoje
+ 
+})();
+
+
+/* 
+
+geras kodas sitas
+for (let category in knygu_katalogas){
+    console.log(category);
+    for (let books of knygu_katalogas[category]){
+        console.log(books)
+        for (let book in books){
+            console.log(book + ": " + books[book])
+            document.querySelector('.accordion-bodyOne').innerHTML += `<p>${book}: ${books[book]}</p>`
+        }
+    }
+}*/
+ 
+/*parasyt programa kuri ivedus studento varda surastu ji sarase. naudoti promt*/
+ 
+ 
+let students = [
+    {
+        id:1,
+        firstName:"tadas",
+        lastname:"tadauskas",
+        email:"tadas@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:2,
+        firstName:"ieva",
+        lastname:"tadauske",
+        email:"ieva@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:3,
+        firstName:"ona",
+        lastname:"tadauskis",
+        email:"ona@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:4,
+        firstName:"tadas",
+        lastname:"tadauskas",
+        email:"tadas@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    },
+    {
+        id:5,
+        firstName:"petras",
+        lastname:"tadauschis",
+        email:"petras@tadauskas.lt",
+        group:"students",
+        marks:[
+            {
+            subject:'programing',
+            mark:4
+            },
+            {
+            subject:'it',
+            mark:8
+            },
+            {
+            subject:'math',
+            mark:5
+            }
+        ]
+    }
+]
+ 
+let student = prompt('ivesk studento varda');
+ 
+const paieska(vardas){
+    return students.firstName === student;
+}
+ 
+console.log(students.find(paieska));
+ 
+
+//const article = document.getElementById('vip');
+ 
+//console.log(article)
+ 
+//const article = document.getElementsByClassName('adsss');
+ 
+//console.log(article)
+ 
+//const article = document.querySelector('#vip'); // naudoti kaip ir css , galima rasyt querry selector all ir ims visus, kitaip tik viena pati pirma kuri randa
+ 
+//console.log(article)
+ 
+//document.querySelector('article').style.backgroundColor='pink';
+ 
+//document.querySelectorAll('p').textContent = "labai gerai";
+ 
+ 
+//for(let text of document.querySelectorAll('h4')){
+//   text.textContent="bla bla bla";}
+
+
+const ul = document.createElement('ul');
+const li = document.createElement('li');
+li.textContent = 'labai svarbus textas'
+ 
+document.querySelector('section').appendChild(ul);// kuriame elementus ir dedame juos i kazkur
+document.querySelector('ul').appendChild(li);
+ 
+document.querySelector('section').appendChild(document.createElement('ul'));
+
+ 
+const tr = document.createElement('tr');
+const td = document.createElement('td');
+ 
+document.querySelector('table').appendChild(tr);
+document.querySelector('tr').appendChild(td);
+ 
+
+ 
+document.querySelector('table').appendChild(document.createElement('tr'));{
+    for( let tr = 0; tr<3; tr++){
+        console.log(tr)
+    }
+};
+
+
+for(let knygos in knygu_katalogas){
+ console.log(knygos)
+     for(let knygu_skaicius of knygu_katalogas[knygos]){
+         console.log(knygu_skaicius)
+            for(let skaicius in knygu_skaicius){
+                console.log(skaicius)
+             }
+         }
+     }
+
+
+
+
+     for(let knygos in knygu_katalogas){
+    console.log('---------------');
+    console.log(knygos)
+        for (let knygosData of knygos){
+            console.log(knygosData[knygos])
+                if(knygos.leidimo_metai === '2023'){
+                    console.log(`nauja knyga${[leidimo_metai]}`);
+        }
+    }
+}
+
+
+
+for (let kategorija in knygu_katalogas) {
+    console.log('---------------');
+    console.log(kategorija);
+
+    
+
+    for (let knyga of knygu_katalogas[kategorija]) {
+        console.log(knyga);
+
+        if (knyga.leidimo_metai === '2023') {
+            console.log(`${knyga.pavadinimas} Nauja knyga`);
+        }
+    }
+}
