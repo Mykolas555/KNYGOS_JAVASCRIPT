@@ -578,3 +578,41 @@ for (let kategorija in knygu_katalogas) {
         }
     }
 }
+
+
+// kai paspaudziam ant kazko ismeta alert
+document.querySelector("#vip").addEventListener('click',()=>{
+    //alert("paspaudziau")
+})
+// ta pati daro tik kad kitas butas
+document.querySelector(".kazkas").onclick=()=>{
+    alert("kitas")
+}
+//paspaudus turi padidet article tekstas. pasikeicia visiems su for
+for(const article of document.querySelectorAll('article')){
+    article.addEventListener('click',()=>{
+        article.style.fontSize="2rem";
+    })
+}
+//keisti formoje kazka(neveikia man) (
+document.querySelector('input').addEventListener('onClick',()=>{
+    console.log(e)
+    const bgColor = document.querySelector('input').value;
+    document.querySelector('body').style.backgroundColor=bgColor;
+})
+
+//galima po klik jei turim forma idet po klick evt ar event
+document.querySelector('form').addEventListener('submit',(e)=>{
+    e.preventDefault(); //pakeicia standartine formos elgsena
+    console.log(e.target);
+    const bgColor = document.querySelector('input').value;
+    document.querySelector('body').style.backgroundColor = bgColor;
+})
+
+
+//paspaudus ant pastraipos teksto, srifto dydis padideja du kartus.
+for(const article of document.querySelectorAll('article')){
+    article.addEventListener('click',(e)=>{
+        e.target.style.backgroundColor="aqua"
+    })
+}
