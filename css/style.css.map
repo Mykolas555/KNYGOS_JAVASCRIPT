@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,IAAI;EACA,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,IAAI;;ACFpB,UAAU;EACN,UAAU,EAAE,SAAS;;AAGzB,iBAAiB;EACb,gBAAgB,EAAE,SAAS",
+"sources": ["../scss/components/_body.scss","../scss/components/_accordion.scss"],
 "names": [],
 "file": "style.css"
 }
