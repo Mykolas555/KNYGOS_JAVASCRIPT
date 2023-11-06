@@ -84,9 +84,6 @@ let knygu_katalogas ={
          }    
  ]
 }
-/*
-
-!!!!!!!geras koas knygu isvedimui!!!!!!
 
 // isvedame jei knyga yra nauja ir knygu kieki kategorijoje
 
@@ -122,41 +119,4 @@ for (let book of knygu_katalogas['eilerasciai']) {
         console.log(property + ": " + book[property]);
         document.querySelector('.accordion-bodyThree').innerHTML += `<p>${property}: ${book[property]}</p>`;
     }
-}
-
-!!!!!cia jis baigiasi!!!!!
-
-*/
-//sukurti todo list aplikacija
-//vartotojas iveda i formos input lauka darbo pavadinima
-//poaspaudzia mygtuka prideti
-//ivestas darbas pridedamas i ul lista
-//kai vartotojas paspaudzia pasalinti, pasalinamas paskutinis to do
-//darbo sukurimo metu i ul sukuriamas li o i li idedamas aprasantis tekstas
-
-/*
-
-!!! reiktu kazkaip taip daryt!!!
-const toDo =[]
-
-document.querySelector('section').appendChild(document.createElement('ul'));
-document.querySelector('ul').appendChild(document.createElement('li'));
-document.querySelector('li').addEventListener('submit',()=>{
-document.querySelectorAll('li').textContent = document.querySelector('input').value;
-})
-
-!!!!     !!!!!
-
-/*document.querySelector('form').addEventListener('submit',()=>{
-document.querySelector('li').innerHTML += `${form}`
-})
-
-//document.querySelectorAll('p').textContent = "labai gerai"
-*/
-
-//paspaudus ant pastraipos teksto, srifto dydis padideja du kartus.
-for(const article of document.querySelectorAll('article')){
-    article.addEventListener('click',(e)=>{
-        e.target.style.backgroundColor="aqua"
-    })
 }
